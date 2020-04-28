@@ -1,0 +1,12 @@
+[Unit]
+Description=Tom Gift
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/Desktop/code/2_7_eink/
+ExecStart=/usr/bin/python3 /home/pi/Desktop/code/2_7_eink/tom_gift.py
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

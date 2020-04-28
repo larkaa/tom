@@ -1,0 +1,13 @@
+Description=Photo Webserver
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/flask_tom_gift/
+ExecStart=/usr/bin/python3 /home/pi/flask_tom_gift/flask_tom_gift.py > /home/pi/flask/photolog.log
+Restart=always
+SyslogIdentifier=controller
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
